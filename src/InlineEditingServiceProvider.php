@@ -3,6 +3,8 @@
 namespace Esign\InlineEditing;
 
 use Illuminate\Support\ServiceProvider;
+use Esign\InlineEditing\Console\InstallCommand;
+
 
 class InlineEditingServiceProvider extends ServiceProvider
 {
@@ -18,15 +20,11 @@ class InlineEditingServiceProvider extends ServiceProvider
         ], 'public');
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
-    }
 
-    public function register()
-    {
-
-    }
-
-    protected function configPath(): string
-    {
-        return __DIR__ . '/../config/:package_name.php';
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallCommand::class,
+            ]);
+        }
     }
 }
