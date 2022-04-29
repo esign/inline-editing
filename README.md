@@ -80,7 +80,7 @@ Supported types are `text, richtext`
 > It is important to protect the inline edit routes so only admins can use the functionality.
 > **This package does not handle authentication**
 
-
+You can add a middleware to the config file that handles the authentication.
 
 ### Testing
 
