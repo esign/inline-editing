@@ -13,6 +13,9 @@ class InlineEditingServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/config.php' => $config_path,
         ], 'config');
+        $this->publishes([
+            __DIR__.'/../public/inline-editing.css' => public_path('assets/css'),
+        ], 'public');
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
     }
