@@ -46,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Esign\\InlineEditing"
+                "Esign\\InlineEditing\\InlineEditingServiceProvider"
             ]
         }
     },
