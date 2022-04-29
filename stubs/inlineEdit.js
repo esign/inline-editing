@@ -77,7 +77,7 @@ export default function() {
         text: this.innerHTML, // or you can also use UI.text
       };
       // eslint-disable-next-line camelcase,no-undef
-      const url = `${base_url_lang}/api/inline-editing/store`;
+      const url = `${base_url}/api/inline-editing/store`;
       const opts = {
         method: 'POST',
         headers: {
