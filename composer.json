@@ -1,5 +1,5 @@
 {
-    "name": "esign/inline-editing",
+    "name": "esign/inline-edit",
     "description": "use inline editing for text and translations",
     "keywords": [
         "esign",
@@ -7,7 +7,7 @@
         "inline",
         "editing"
     ],
-    "homepage": "https://github.com/Esign/InlineEdit",
+    "homepage": "https://github.com/Esign/InlineEditing",
     "license": "MIT",
     "type": "library",
     "authors": [
