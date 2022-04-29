@@ -61,6 +61,13 @@ export default function() {
       el.addEventListener('focusin', start);
       el.addEventListener('change', input);
       el.addEventListener('focusout', end);
+      if (el.parentNode.tagName === 'A') {
+        el.onclick = e => {
+          if (!e.ctrlKey) {
+            e.preventDefault();
+          }
+        };
+      }
     });
 
     return this;
