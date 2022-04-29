@@ -1,0 +1,26 @@
+.main {
+    padding: 0;
+    flex-grow: 1;
+}
+.rich-editable {
+    padding: 10px;
+    background: #eee;
+    display: inline-block;
+}
+
+.editable {
+    padding: 10px;
+    background: #eee;
+    display: inline-block;
+}
+
+/* this class is handled by Editable */
+.is-modified {
+    background: #bff !important;
+}
+
+/* this class is handled by Editable */
+.is-editing {
+    background: #bfb;
+    outline: none;
+}

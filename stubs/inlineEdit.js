@@ -34,13 +34,11 @@ export default function() {
       this.isModified = false;
       this.element = ev.currentTarget;
       this.element.classList.add(this.classEditing);
-      this.text_before = ev.currentTarget.textContent;
       this.html_before = ev.currentTarget.innerHTML;
       this.onStart.call(this.element, ev, this);
     };
 
     const input = ev => {
-      this.text = this.element.textContent;
       this.html = this.element.innerHTML;
       this.element = ev.currentTarget;
       this.isModified = this.html !== this.html_before;
@@ -79,7 +77,7 @@ export default function() {
         text: this.innerHTML, // or you can also use UI.text
       };
       // eslint-disable-next-line camelcase,no-undef
-      const url = `${base_url}/api/inline-editing/store`;
+      const url = `${base_url_lang}/api/inline-editing/store`;
       const opts = {
         method: 'POST',
         headers: {

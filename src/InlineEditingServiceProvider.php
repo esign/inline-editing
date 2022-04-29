@@ -11,9 +11,10 @@ class InlineEditingServiceProvider extends ServiceProvider
         $config_path = function_exists('config_path') ? config_path('inline-edit.php') : 'inline-edit.php';
 
         $this->publishes([
-            __DIR__.'/../config/config.php' => $config_path,
+            __DIR__ . '/../config/config.php' => $config_path,
         ], 'config');
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
     }
 
     public function register()

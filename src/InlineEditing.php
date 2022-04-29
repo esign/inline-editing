@@ -36,12 +36,12 @@ class InlineEditing
         return self::$instance;
     }
 
-    public static function string(string $term, array $replacements = [], bool $isRich = false): string
+    public static function string(string $term, array $replacements = []): string
     {
-        return self::getInstance()->translate($term, 'text', $replacements, $isRich);
+        return self::getInstance()->translate($term, 'text', $replacements);
     }
 
-    protected function translate(string $term, string $type, array $replacements = [], bool $isRich = false): string
+    protected function translate(string $term, string $type, array $replacements = []): string
     {
         $lang = app()->getLocale();
 
@@ -62,7 +62,7 @@ class InlineEditing
             }
         }
 
-        $classes[] = $isRich ? 'rich-editable' : 'editable';
+        $classes[] = ($type == 'richtext') ? 'rich-editable' : 'editable';
         $attributes['data-tid'] = $row->id;
         $attributes['data-tlang'] = $lang;
         $attributes['data-ttype'] = $type;
