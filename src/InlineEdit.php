@@ -47,7 +47,7 @@ class InlineEdit
 
         $row = $this->firstOrCreateRow($term, $type);
 
-        $container = ($type == 'richtext') ? 'div' : 'span';
+        $container = ($row->type == 'richtext') ? 'div' : 'span';
         $attributes = [];
 
         if (self::MULTILANG) {

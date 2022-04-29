@@ -25,9 +25,9 @@ class InlineEditController extends Controller
         $success = \Esign\InlineEdit\InlineEdit::updateBatch($request->all());
 
         if ($success) {
-            return $this->showSuccess('Page updated');
+            return response()->json(['success' => 'term updated']);
         } else {
-            return $this->showError('Unknown error');
+            return response()->json(['error' => 'failed to update term']);
         }
     }
 }
