@@ -4,6 +4,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_slug)
 ![GitHub Actions](https://github.com/:vendor/:package_slug/actions/workflows/main.yml/badge.svg)
 
+![img.png](img.png)
+
 This package enables you to edit your websites text and translations inline.
 
 ## Installation
