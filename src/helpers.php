@@ -7,7 +7,9 @@ if (! function_exists('esign_inline')) {
             return \Esign\InlineEdit\InlineEdit::string($term, $replaces);
         }
 
-        $result = \Esign\InlineEdit\Services\TranslationService::findForTerm($term);
+        $service = new \Esign\InlineEdit\Services\TranslationService();
+
+        $result = $service->findForTerm($term);
 
         if (empty($result->value)) {
             return show_term_for_dev_env($term);
