@@ -1,6 +1,6 @@
 <?php
 
-namespace Esign\InlineEditing\Http\Controllers;
+namespace Esign\InlineEdit\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

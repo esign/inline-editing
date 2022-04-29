@@ -1,8 +1,8 @@
 <?php
 
-namespace Esign\InlineEditing\Http\Controllers;
+namespace Esign\InlineEdit\Http\Controllers;
 
-class InlineEditingController extends Controller
+class InlineEditController extends Controller
 {
     public function start()
     {
@@ -20,7 +20,7 @@ class InlineEditingController extends Controller
 
     public function updateTranslations($request)
     {
-        $success = \Esign\InlineEditing\InlineEditing::updateBatch($request->all());
+        $success = \Esign\InlineEdit\InlineEdit::updateBatch($request->all());
 
         if ($success) {
             return $this->showSuccess('Page updated');

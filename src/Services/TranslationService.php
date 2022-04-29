@@ -1,6 +1,6 @@
 <?php
 
-namespace Esign\InlineEditing\Services;
+namespace Esign\InlineEdit\Services;
 
 use Illuminate\Support\Facades\DB;
 

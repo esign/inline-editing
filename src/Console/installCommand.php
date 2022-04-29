@@ -1,6 +1,6 @@
 <?php
 
-namespace Esign\InlineEditing\Console;
+namespace Esign\InlineEdit\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

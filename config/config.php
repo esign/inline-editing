@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'database'   => env('INLINE_EDITING_DB', 'dictionary'),
+    'database'   => env('INLINE_EDIT_DB_TABLE', 'dictionary'),
 ];

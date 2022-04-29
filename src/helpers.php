@@ -4,10 +4,10 @@ if (! function_exists('esign_inline')) {
     function esign_inline(string $term, array $replaces = []): ?string
     {
         if (session()->get('is_editing')) {
-            return \Esign\InlineEditing\InlineEditing::string($term, $replaces);
+            return \Esign\InlineEdit\InlineEdit::string($term, $replaces);
         }
 
-        $result = \Esign\InlineEditing\Services\TranslationService::findForTerm($term);
+        $result = \Esign\InlineEdit\Services\TranslationService::findForTerm($term);
 
         if (empty($result->value)) {
             return show_term_for_dev_env($term);

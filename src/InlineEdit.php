@@ -1,6 +1,6 @@
 <?php
 
-namespace Esign\InlineEditing;
+namespace Esign\InlineEdit;
 
 use App\Models\Dictionary;
 use Illuminate\Support\Facades\Auth;
@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 /**
  *
- * Class InlineEditing
+ * Class InlineEdit
  */
-class InlineEditing
+class InlineEdit
 {
     public const MULTILANG = true;
 

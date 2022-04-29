@@ -7,7 +7,7 @@
         "inline",
         "editing"
     ],
-    "homepage": "https://github.com/Esign/InlineEditing",
+    "homepage": "https://github.com/Esign/InlineEdit",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Esign\\InlineEditing\\": "src"
+            "Esign\\InlineEdit\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Esign\\InlineEditing\\Tests\\": "tests"
+            "Esign\\InlineEdit\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Esign\\InlineEditing\\InlineEditingServiceProvider"
+                "Esign\\InlineEdit\\InlineEditServiceProvider"
             ]
         }
     },
