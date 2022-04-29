@@ -2,6 +2,8 @@
 
 namespace Esign\InlineEdit\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class InlineEditController extends Controller
 {
     public function start()
@@ -18,7 +20,7 @@ class InlineEditController extends Controller
         return redirect('/');
     }
 
-    public function updateTranslations($request)
+    public function updateTranslations(Request $request)
     {
         $success = \Esign\InlineEdit\InlineEdit::updateBatch($request->all());
 
