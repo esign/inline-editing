@@ -9,7 +9,9 @@ export default function() {
     if (isRich) {
       document.querySelectorAll(sel).forEach(el => {
         // eslint-disable-next-line no-undef
-        BalloonEditor.create(el);
+        BalloonEditor.create(el, {
+          toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'blockQuote' ],
+        });
       });
     }
 

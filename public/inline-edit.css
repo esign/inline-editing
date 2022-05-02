@@ -1,15 +1,11 @@
-.main {
-    padding: 0;
-    flex-grow: 1;
-}
 .rich-editable {
-    padding: 10px;
+    padding: 3px;
     background: #eee;
     display: inline-block;
 }
 
 .editable {
-    padding: 10px;
+    padding: 3px;
     background: #eee;
     display: inline-block;
 }
