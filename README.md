@@ -84,6 +84,13 @@ Supported types are `text, richtext`
 
 You can add a middleware to the config file that handles the authentication.
 
+The available options are default limited to `'styles', 'bold', 'italic', 'link', 'blockQuote'` but can be expanded in the `inlineEdit.js` file.
+
+For all available options check: https://ckeditor.com/docs/ckeditor5/latest/api/module_core_editor_editorconfig-EditorConfig.html
+
+
+
+
 ### Testing
 
 ```bash
