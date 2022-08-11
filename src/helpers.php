@@ -6,9 +6,9 @@ if (! function_exists('esign_inline')) {
         if (session()->get('is_editing')) {
             return \Esign\InlineEdit\InlineEdit::string($term, $replaces);
         }
-        
+
         $service = new \Esign\InlineEdit\Services\TranslationService();
-        
+
         $result = $service->findForTerm($term);
 
         if (config('inline-edit.is_multilang')) {
