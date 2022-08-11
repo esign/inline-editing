@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\DB;
  */
 class InlineEdit
 {
-    public const MULTILANG = true;
-
     protected static $instance = null;
     protected array $database = [];
     protected bool $editMode = false;
@@ -50,7 +48,7 @@ class InlineEdit
         $container = ($row->type == 'richtext') ? 'div' : 'span';
         $attributes = [];
 
-        if (self::MULTILANG) {
+        if (config('inline-edit.is_multilang')) {
             $value = (empty($row->{"value_$lang"})) ? $term : $row->{"value_$lang"};
         } else {
             $value = (empty($row->{"value"})) ? $term : $row->{"value"};
@@ -103,7 +101,7 @@ class InlineEdit
     {
         $lang = $update['tlang'];
         $value = $update['text'];
-        if (self::MULTILANG) {
+        if (config('inline-edit.is_multilang')) {
             DB::table(config('inline-edit.database')) ->where('id', $update['tid']) ->update(["value_$lang" => $value]);
         } else {
             DB::table(config('inline-edit.database')) ->where('id', $update['tid']) ->update(["value" => $value]);
