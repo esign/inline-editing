@@ -89,6 +89,18 @@ The available options are default limited to `'styles', 'bold', 'italic', 'link'
 For all available options check: https://ckeditor.com/docs/ckeditor5/latest/api/module_core_editor_editorconfig-EditorConfig.html
 
 
+## Protecting your routes
+
+We are using https://github.com/esign/laravel-unleash-guard to protect our routes. After installation you can simply add the UnleashWebsiteMiddleware to your routes in your config file
+```
+use Esign\UnleashGuard\Http\Middleware\UnleashWebsiteMiddleware;
+
+return [
+    ...
+    'web-middleware'   => ['web', UnleashWebsiteMiddleware::class],
+    'api-middleware'   => [\App\Http\Middleware\EncryptCookies::class, UnleashWebsiteMiddleware::class],
+];
+``` 
 
 
 ### Testing
