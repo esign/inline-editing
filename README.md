@@ -91,14 +91,14 @@ For all available options check: https://ckeditor.com/docs/ckeditor5/latest/api/
 
 ## Protecting your routes
 
-We are using https://github.com/esign/laravel-unleash-guard to protect our routes. After installation you can simply add the UnleashWebsiteMiddleware to your routes in your config file
+We are using https://github.com/esign/laravel-unleash-guard to protect our routes. After installation you can simply add the UnleashWebsiteMiddleware & EncryptCookies to your routes in your config file as shown below.
 ```
 use Esign\UnleashGuard\Http\Middleware\UnleashWebsiteMiddleware;
 
 return [
     ...
     'web-middleware'   => ['web', UnleashWebsiteMiddleware::class],
-    'api-middleware'   => [\App\Http\Middleware\EncryptCookies::class, UnleashWebsiteMiddleware::class],
+    'api-middleware'   => ['api', \App\Http\Middleware\EncryptCookies::class, UnleashWebsiteMiddleware::class],
 ];
 ``` 
 
