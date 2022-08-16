@@ -6,10 +6,8 @@ if (! function_exists('esign_inline')) {
         if (session()->get('is_editing')) {
             return \Esign\InlineEdit\InlineEdit::string($term, $replaces);
         }
-
-        $service = new \Esign\InlineEdit\Services\TranslationService();
-
-        $result = $service->findForTerm($term);
+        
+        $result = \Esign\InlineEdit\Services\Facades\TranslationService::findForTerm($term);
 
         if (empty($result->value)) {
             return show_term_for_dev_env($term);
