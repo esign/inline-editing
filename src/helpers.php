@@ -9,11 +9,22 @@ if (! function_exists('esign_inline')) {
         
         $result = \Esign\InlineEdit\Services\Facades\TranslationService::findForTerm($term);
 
-        if (empty($result->value)) {
-            return show_term_for_dev_env($term);
+        if (config('inline-edit.is_multilang')) {
+            $lang = app()->getLocale();
+
+            if (empty($result->{"value_$lang"})) {
+                return show_term_for_dev_env($term);
+            }
+    
+            $string = $result->{"value_$lang"};
+        } else {
+            if (empty($result->value)) {
+                return show_term_for_dev_env($term);
+            }
+    
+            $string = $result->value;
         }
 
-        $string = $result->value;
 
         foreach ($replaces as $search => $replace) {
             $string = str_replace($search, $replace, $string);
