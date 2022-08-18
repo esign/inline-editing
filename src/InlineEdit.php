@@ -60,7 +60,7 @@ class InlineEdit
             }
         }
 
-        $classes[] = ($type == 'richtext') ? 'rich-editable' : 'editable';
+        $classes[] = ($row->type == 'richtext') ? 'rich-editable' : 'editable';
         $attributes['data-tid'] = $row->id;
         $attributes['data-tlang'] = $lang;
         $attributes['data-ttype'] = $type;
